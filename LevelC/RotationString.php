@@ -14,8 +14,13 @@ class RotationString
      */
     public static function isRotation($s1, $s2)
     {
-        /** @TODO */
-
+        $conc = $s1.$s1;
+        if (strlen($s1) != strlen($s2)){
+            return false;
+        }
+        if (substr($s2,($conc))){
+            return true;
+        }
         return false;
     }
 

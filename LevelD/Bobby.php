@@ -22,9 +22,13 @@ class Bobby
      */
     public function giveMoney($price)
     {
+        if ($this->total < $price)
+        {
+            return false;
+        }
         /** @TODO */
 
-        return false;
+        return true;
     }
 
     /**
