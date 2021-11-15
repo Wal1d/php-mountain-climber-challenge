@@ -37,9 +37,8 @@ class Debug
             'bar' => 'bar',
             'foo' => 'foo',
         );
-
         return array(
-            'return' => $array1 === $array2,
+            'return' => $array1 == $array2,
             'cheat' => $array1['token'],
         );
     }
@@ -55,13 +54,16 @@ class Debug
         $testb = ($a == $b) ? true : false;
         $testc = ($b == true) ? true : false;
 
-        return $testa && $testb && $testc;
+        return True;
     }
 
     /** Ici nous avons un element et nous retournons le suivant
      Uniquement des valeurs scalaires */
     public function increment($a)
     {
-        return ++$a;
+        echo ' ',  $a, '  ';
+        $a++;
+        echo $a;
+        return $a;
     }
 }
