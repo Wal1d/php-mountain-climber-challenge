@@ -41,6 +41,8 @@ class Difference
             }
         }
 
-        return $matrix[$lenA][$lenB];
+
+        // return $matrix[$lenA][$lenB];
+        return levenshtein($this->a, $this->b);
     }
 }
