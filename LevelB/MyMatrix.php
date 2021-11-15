@@ -83,8 +83,28 @@ class MyMatrix
      */
     public function fillZero()
     {
-        /** @TODO */
+        $M = array();
+        for ($i = 0; $i < $this->iMax; ++$i) {
+            for ($j = 0; $j < $this->jMax; ++$j) {
+                $M[$i][$j] = $this->matrix[$i][$j];
+            }
+        }
 
+        for ($i = 0; $i < $this->iMax; ++$i) {
+            for ($j = 0; $j < $this->jMax; ++$j) {
+                
+                if ($M[$i][$j] == 0)
+                {
+                    for ($x = 0; $x < $this->iMax; ++$x) {
+                        $this->matrix[$x][$j] = 0;
+                    }
+                    for ($x = 0; $x < $this->jMax; ++$x) {
+                        $this->matrix[$i][$x] = 0;
+                    }
+                }
+
+            }
+        }
         return $this;
     }
 }
